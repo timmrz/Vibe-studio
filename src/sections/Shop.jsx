@@ -162,7 +162,6 @@ const Shop = () => {
 					end: pinWrapWidth,
 					scrub: true,
 					scroller: ".App",
-					markers: true,
 				},
 				x: -pinWrapWidth,
 				ease: "none",
