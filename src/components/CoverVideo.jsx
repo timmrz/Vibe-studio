@@ -47,6 +47,8 @@ const Title = styled(motion.div)`
 	}
 
 	h1 {
+		padding-right: 0.5rem;
+		overflow: visible;
 		font-family: "Kaushan Script";
 		font-size: ${(props) => props.theme.fontBig};
 		text-shadow: 1px 1px 1px ${(props) => props.theme.body};
