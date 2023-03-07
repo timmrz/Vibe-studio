@@ -37,11 +37,11 @@ const Overlay = styled.div`
 	@media (max-width: 70em) {
 		width: 40vw;
 		height: 80vh;
+		box-shadow: 0 0 0 60vw ${(props) => props.theme.text};
 	}
 
 	@media (max-width: 64em) {
 		width: 50vw;
-		box-shadow: 0 0 0 60vw ${(props) => props.theme.text};
 	}
 
 	@media (max-width: 48em) {
@@ -86,6 +86,10 @@ const Text = styled.div`
 	right: 0;
 
 	z-index: 11;
+
+	@media (max-width: 60em) {
+		font-size: ${(props) => props.theme.fontmd};
+	}
 
 	@media (max-width: 48em) {
 		display: none;

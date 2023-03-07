@@ -45,7 +45,7 @@ const LogoContainer = styled.div`
 const FooterComponent = styled(motion.footer)`
 	width: 80vw;
 
-	@media (max-width: 48em) {
+	@media (max-width: 60em) {
 		width: 90vw;
 	}
 
@@ -81,8 +81,11 @@ const FooterComponent = styled(motion.footer)`
 			transform: scale(0.9);
 		}
 
-		@media (max-width: 48em) {
+		@media (max-width: 72em) {
 			padding: 1rem;
+		}
+
+		@media (max-width: 60em) {
 			font-size: ${(props) => props.theme.fontmd};
 		}
 	}
@@ -97,7 +100,7 @@ const Bottom = styled.div`
 	align-items: center;
 	justify-content: center;
 
-	@media (max-width: 48em) {
+	@media (max-width: 72em) {
 		font-size: ${(props) => props.theme.fontmd};
 	}
 `;
