@@ -14,6 +14,10 @@ const NavContainer = styled(motion.div)`
 	justify-content: center;
 
 	transition: top 300ms ease-in-out;
+
+	@media (max-width: 40em) {
+		top: ${(props) => (props.menuOpened ? "0" : `-50vh`)};
+	}
 `;
 
 const MenuItems = styled(motion.ul)`
@@ -31,6 +35,12 @@ const MenuItems = styled(motion.ul)`
 	gap: 10rem;
 
 	cursor: pointer;
+
+	@media (max-width: 40em) {
+		flex-direction: column;
+		gap: 6vh;
+		height: 50vh;
+	}
 `;
 
 const MenuBtn = styled.li`
@@ -55,16 +65,17 @@ const MenuBtn = styled.li`
 	font-weight: 600;
 	text-transform: uppercase;
 	cursor: pointer;
+
+	@media (max-width: 40em) {
+		width: 10rem;
+		height: 2rem;
+	}
 `;
 
 const MenuItem = styled(motion.li)`
 	text-transform: uppercase;
 	color: ${(props) => props.theme.text};
 `;
-
-const itemVariants = {
-	hidden: {},
-};
 
 const Navbar = () => {
 	const [menuOpened, setMenuOpened] = useState(false);
@@ -93,7 +104,7 @@ const Navbar = () => {
 			}}
 			transition={{
 				duration: 2,
-				delay: 2,
+				delay: 5,
 			}}
 		>
 			<MenuItems

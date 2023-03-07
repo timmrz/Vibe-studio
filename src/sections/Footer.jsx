@@ -8,7 +8,7 @@ import Logo from "../assets/Svgs/star_white_48dp.svg";
 const Section = styled.section`
 	min-height: 100vh;
 	width: 100vw;
-	margin: 5rem auto;
+	margin: 5rem auto 0;
 
 	display: flex;
 	align-items: center;
@@ -34,12 +34,20 @@ const LogoContainer = styled.div`
 
 	h3 {
 		font-family: "Kaushan Script";
-		font-size: ${(props) => props.theme.fontxl};
+		font-size: ${(props) => props.theme.fontxxl};
+
+		@media (max-width: 48em) {
+			font-size: ${(props) => props.theme.fontxl};
+		}
 	}
 `;
 
 const FooterComponent = styled(motion.footer)`
 	width: 80vw;
+
+	@media (max-width: 48em) {
+		width: 90vw;
+	}
 
 	ul {
 		list-style: none;
@@ -52,6 +60,10 @@ const FooterComponent = styled(motion.footer)`
 		padding: 0 1rem;
 		border-top: 1px solid ${(props) => props.theme.text};
 		border-bottom: 1px solid ${(props) => props.theme.text};
+
+		@media (max-width: 48em) {
+			justify-content: center;
+		}
 	}
 
 	li {
@@ -68,6 +80,11 @@ const FooterComponent = styled(motion.footer)`
 		&:active {
 			transform: scale(0.9);
 		}
+
+		@media (max-width: 48em) {
+			padding: 1rem;
+			font-size: ${(props) => props.theme.fontmd};
+		}
 	}
 `;
 
@@ -79,6 +96,10 @@ const Bottom = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: center;
+
+	@media (max-width: 48em) {
+		font-size: ${(props) => props.theme.fontmd};
+	}
 `;
 
 const Footer = () => {
