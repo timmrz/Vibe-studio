@@ -47,13 +47,11 @@ const Title = styled(motion.div)`
 	}
 
 	h1 {
-		margin-right: 1rem;
 		font-family: "Kaushan Script";
 		font-size: ${(props) => props.theme.fontBig};
 		text-shadow: 1px 1px 1px ${(props) => props.theme.body};
 
 		@media (max-width: 30em) {
-			margin-right: 0.5rem;
 			font-size: calc(5rem + 8vw);
 		}
 	}
